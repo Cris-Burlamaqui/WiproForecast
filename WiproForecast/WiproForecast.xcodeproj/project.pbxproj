@@ -20,6 +20,7 @@
 		F5770AFF24BCE9C600386FAA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AFE24BCE9C600386FAA /* Weather.swift */; };
 		F5770B0224BCEAF300386FAA /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770B0124BCEAF300386FAA /* DoubleExtension.swift */; };
 		F5770B0424BCEB2F00386FAA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770B0324BCEB2F00386FAA /* StringExtension.swift */; };
+		F5770B0624BCECE000386FAA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770B0524BCECE000386FAA /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F5770AFE24BCE9C600386FAA /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		F5770B0124BCEAF300386FAA /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		F5770B0324BCEB2F00386FAA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F5770B0524BCECE000386FAA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		F5770AF924BCE78300386FAA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F5770B0524BCECE000386FAA /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5770B0624BCECE000386FAA /* Network.swift in Sources */,
 				F5770B0224BCEAF300386FAA /* DoubleExtension.swift in Sources */,
 				F5770AFD24BCE9BA00386FAA /* Main.swift in Sources */,
 				F5770AF724BCE5A000386FAA /* ForecastTableViewCell.swift in Sources */,

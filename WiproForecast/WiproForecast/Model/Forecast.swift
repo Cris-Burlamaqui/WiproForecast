@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct ForecastList: Codable {
+    let list: [Forecast]
+}
+
 struct Forecast: Codable {
     
     let main: Main
