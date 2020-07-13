@@ -14,14 +14,14 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     
     let request = Request()
     
-    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet var cityTextField: UITextField!
     
-    @IBOutlet weak var forecastImage: UIImageView!
-    @IBOutlet weak var forecastDescription: UILabel!
-    @IBOutlet weak var cityName: UILabel!
-    @IBOutlet weak var temperature: UILabel!
+    @IBOutlet var forecastImage: UIImageView!
+    @IBOutlet var forecastDescription: UILabel!
+    @IBOutlet var cityName: UILabel!
+    @IBOutlet var temperature: UILabel!
     
-    @IBOutlet weak var forecastTableView: UITableView!
+    @IBOutlet var forecastTableView: UITableView!
     
     
     
@@ -30,11 +30,13 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         request.delegate = self
         request.getForecast(by: "Dublin")
+        cityTextField.placeholder = "Dublin"
     }
 
 
     @IBAction func searchCityForecast(_ sender: Any) {
         
+        request.getForecast(by: cityTextField.text ?? "Dublin")
     }
     
     
@@ -43,7 +45,13 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     
     func didRetrieveForecast(_ data: [Forecast]?) {
         if let forecastData = data {
-            print(forecastData)
+            
+            DispatchQueue.main.async {
+                self.forecastDescription.text = forecastData[0].weather[0].main
+                self.cityName.text = self.cityTextField.text!.elementsEqual("") ? "Dublin" : self.cityTextField.text!
+                self.temperature.text = self.convertTemperature(forecastData[0].main.temp, from: .kelvin, to: .celsius)
+                self.forecastImage.image = self.convertImage(from: forecastData[0].weather[0].main)
+            }
         }
     }
     
@@ -64,6 +72,39 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "forecastCell", for: indexPath) as! ForecastTableViewCell
         
         return cell
+    }
+    
+    
+    // MARK: Convertions
+    
+    func convertTemperature(_ temp: Double, from inputTempType: UnitTemperature, to outputTempType: UnitTemperature) -> String {
+        let mf = MeasurementFormatter()
+        mf.numberFormatter.maximumFractionDigits = 0
+        mf.unitOptions = .providedUnit
+        let input = Measurement(value: temp, unit: UnitTemperature.kelvin)
+        let output = input.converted(to: UnitTemperature.celsius)
+        return mf.string(from: output)
+    }
+    
+    func convertImage(from description: String) -> UIImage {
+        
+        switch description {
+        case "Thunderstorm":
+            return UIImage(named: "storm")!
+        case "Drizzle":
+            return UIImage(named: "rain")!
+        case "Rain":
+            return UIImage(named: "rain")!
+        case "Snow":
+            return UIImage(named: "snow")!
+        case "Clear":
+            return UIImage(named: "sunny")!
+        case "Clouds":
+            return UIImage(named: "clouds")!
+        default:
+            return UIImage(named: "haze")!
+                  
+        }
     }
 }
 

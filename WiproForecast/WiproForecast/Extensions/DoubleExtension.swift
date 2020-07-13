@@ -9,7 +9,13 @@
 import Foundation
 
 extension Double {
-    func convertToCelcius() -> Int {
+    func convertFarenheitToCelcius() -> Int {
         Int(5.0 / 9.0 * (self - 32.0))
     }
+    
+    func convertKelvinToCelcius() -> Int {
+        Int(self - 273.15)
+    }
+    
+    
 }

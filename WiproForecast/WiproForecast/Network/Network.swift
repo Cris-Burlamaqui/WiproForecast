@@ -39,7 +39,8 @@ class Request {
     
     func getForecast(by city: String) {
         
-        let forecastUrl = URL(string: "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&appid=\(apiKey)")!
+        let cityStr = city.replacingOccurrences(of: " ", with: "%20")
+        let forecastUrl = URL(string: "https://api.openweathermap.org/data/2.5/forecast?q=\(cityStr)&appid=\(apiKey)")!
         requestData(from: forecastUrl, and: "GET")
     }
     

@@ -44,10 +44,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.53333333333333333" green="0.43137254901960786" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Iam-zZ-usl" firstAttribute="width" secondItem="qxg-ps-1qP" secondAttribute="width" multiplier="0.9" id="8yB-lA-AMp"/>
                                             <constraint firstItem="Iam-zZ-usl" firstAttribute="centerX" secondItem="qxg-ps-1qP" secondAttribute="centerX" id="HUI-r6-jae"/>
                                             <constraint firstItem="Iam-zZ-usl" firstAttribute="centerY" secondItem="qxg-ps-1qP" secondAttribute="centerY" id="M1v-gm-hng"/>
                                             <constraint firstAttribute="height" constant="90" id="Mqb-2X-nYA"/>
-                                            <constraint firstItem="Iam-zZ-usl" firstAttribute="width" secondItem="qxg-ps-1qP" secondAttribute="width" multiplier="0.9" id="p79-LQ-mHh"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uZO-E6-DtZ" userLabel="Today Weather Stack View">
@@ -177,6 +177,7 @@
                             <constraint firstItem="nd1-gs-6xc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5AY-Zx-auz"/>
                             <constraint firstItem="nd1-gs-6xc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6i1-Lp-WYc"/>
                             <constraint firstItem="nd1-gs-6xc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L2b-uW-4lS"/>
+                            <constraint firstItem="qxg-ps-1qP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LBx-qw-bGq"/>
                             <constraint firstItem="gkd-Dp-4Na" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hvl-qI-kqs"/>
                             <constraint firstItem="gkd-Dp-4Na" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="kTl-Rs-5NB"/>
                             <constraint firstItem="gkd-Dp-4Na" firstAttribute="top" secondItem="nd1-gs-6xc" secondAttribute="bottom" constant="15" id="rty-fX-sBU"/>

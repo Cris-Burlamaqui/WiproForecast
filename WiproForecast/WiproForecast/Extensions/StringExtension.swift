@@ -17,4 +17,6 @@ extension String {
         let weekDay = dateFormatter.string(from: date ?? Date())
         return weekDay
     }
+    
+    
 }
