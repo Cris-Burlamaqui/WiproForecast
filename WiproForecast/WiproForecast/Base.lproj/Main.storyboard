@@ -25,10 +25,10 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="Iam-zZ-usl">
                                                 <rect key="frame" x="20.5" y="28" width="373" height="34"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPB-Tp-sIu">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fPB-Tp-sIu">
                                                         <rect key="frame" x="0.0" y="0.0" width="289" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3J-tj-t78">
                                                         <rect key="frame" x="325" y="0.0" width="48" height="34"/>
@@ -51,7 +51,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uZO-E6-DtZ" userLabel="Today Weather Stack View">
-                                        <rect key="frame" x="71.5" y="98" width="271.5" height="108.5"/>
+                                        <rect key="frame" x="117" y="98" width="180" height="108.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6Iu-xa-rQN">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="108.5"/>
@@ -71,14 +71,8 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dublin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2r-xw-xEw">
-                                                <rect key="frame" x="110" y="0.0" width="61.5" height="108.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <color key="textColor" red="0.53333333329999999" green="0.43137254899999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="E4e-As-1ep">
-                                                <rect key="frame" x="201.5" y="0.0" width="70" height="108.5"/>
+                                                <rect key="frame" x="110" y="0.0" width="70" height="108.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="18º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8v-Ov-YvV">
                                                         <rect key="frame" x="0.0" y="0.0" width="70" height="108.5"/>
@@ -186,7 +180,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Forecast" id="rDG-RD-U45"/>
                     <connections>
-                        <outlet property="cityName" destination="j2r-xw-xEw" id="ILf-eM-a6b"/>
                         <outlet property="cityTextField" destination="fPB-Tp-sIu" id="N7r-4r-HHA"/>
                         <outlet property="forecastDescription" destination="hIE-BP-eBT" id="BLP-hr-3s6"/>
                         <outlet property="forecastImage" destination="aQW-jH-PJG" id="epk-iH-Bk9"/>

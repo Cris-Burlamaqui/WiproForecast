@@ -18,7 +18,6 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var forecastImage: UIImageView!
     @IBOutlet var forecastDescription: UILabel!
-    @IBOutlet var cityName: UILabel!
     @IBOutlet var temperature: UILabel!
     
     @IBOutlet var forecastTableView: UITableView!
@@ -30,7 +29,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         request.delegate = self
         request.getForecast(by: "Dublin")
-        cityTextField.placeholder = "Dublin"
+        cityTextField.text = "Dublin"
     }
 
 
@@ -48,7 +47,6 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
             
             DispatchQueue.main.async {
                 self.forecastDescription.text = forecastData[0].weather[0].main
-                self.cityName.text = self.cityTextField.text!.elementsEqual("") ? "Dublin" : self.cityTextField.text!
                 self.temperature.text = self.convertTemperature(forecastData[0].main.temp, from: .kelvin, to: .celsius)
                 self.forecastImage.image = self.convertImage(from: forecastData[0].weather[0].main)
             }
