@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		F5770AD524BCB7BA00386FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AD424BCB7BA00386FAA /* AppDelegate.swift */; };
 		F5770AD724BCB7BA00386FAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AD624BCB7BA00386FAA /* SceneDelegate.swift */; };
-		F5770AD924BCB7BA00386FAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AD824BCB7BA00386FAA /* ViewController.swift */; };
+		F5770AD924BCB7BA00386FAA /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AD824BCB7BA00386FAA /* ForecastViewController.swift */; };
 		F5770ADC24BCB7BA00386FAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5770ADA24BCB7BA00386FAA /* Main.storyboard */; };
 		F5770ADE24BCB7BC00386FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5770ADD24BCB7BC00386FAA /* Assets.xcassets */; };
 		F5770AE124BCB7BC00386FAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5770ADF24BCB7BC00386FAA /* LaunchScreen.storyboard */; };
 		F5770AEC24BCB7BC00386FAA /* WiproForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AEB24BCB7BC00386FAA /* WiproForecastTests.swift */; };
+		F5770AF724BCE5A000386FAA /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AF624BCE5A000386FAA /* ForecastTableViewCell.swift */; };
+		F5770AFB24BCE92700386FAA /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AFA24BCE92700386FAA /* Forecast.swift */; };
+		F5770AFD24BCE9BA00386FAA /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AFC24BCE9BA00386FAA /* Main.swift */; };
+		F5770AFF24BCE9C600386FAA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AFE24BCE9C600386FAA /* Weather.swift */; };
+		F5770B0224BCEAF300386FAA /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770B0124BCEAF300386FAA /* DoubleExtension.swift */; };
+		F5770B0424BCEB2F00386FAA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770B0324BCEB2F00386FAA /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +36,7 @@
 		F5770AD124BCB7BA00386FAA /* WiproForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiproForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5770AD424BCB7BA00386FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5770AD624BCB7BA00386FAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5770AD824BCB7BA00386FAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5770AD824BCB7BA00386FAA /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		F5770ADB24BCB7BA00386FAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5770ADD24BCB7BC00386FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5770AE024BCB7BC00386FAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +44,12 @@
 		F5770AE724BCB7BC00386FAA /* WiproForecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiproForecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5770AEB24BCB7BC00386FAA /* WiproForecastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproForecastTests.swift; sourceTree = "<group>"; };
 		F5770AED24BCB7BC00386FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5770AF624BCE5A000386FAA /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		F5770AFA24BCE92700386FAA /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		F5770AFC24BCE9BA00386FAA /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		F5770AFE24BCE9C600386FAA /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		F5770B0124BCEAF300386FAA /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		F5770B0324BCEB2F00386FAA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +93,10 @@
 			children = (
 				F5770AD424BCB7BA00386FAA /* AppDelegate.swift */,
 				F5770AD624BCB7BA00386FAA /* SceneDelegate.swift */,
-				F5770AD824BCB7BA00386FAA /* ViewController.swift */,
+				F5770AD824BCB7BA00386FAA /* ForecastViewController.swift */,
+				F5770AF824BCE77100386FAA /* Model */,
+				F5770AF924BCE78300386FAA /* Network */,
+				F5770B0024BCEAD300386FAA /* Extensions */,
 				F5770ADA24BCB7BA00386FAA /* Main.storyboard */,
 				F5770ADD24BCB7BC00386FAA /* Assets.xcassets */,
 				F5770ADF24BCB7BC00386FAA /* LaunchScreen.storyboard */,
@@ -97,6 +112,33 @@
 				F5770AED24BCB7BC00386FAA /* Info.plist */,
 			);
 			path = WiproForecastTests;
+			sourceTree = "<group>";
+		};
+		F5770AF824BCE77100386FAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5770AF624BCE5A000386FAA /* ForecastTableViewCell.swift */,
+				F5770AFA24BCE92700386FAA /* Forecast.swift */,
+				F5770AFC24BCE9BA00386FAA /* Main.swift */,
+				F5770AFE24BCE9C600386FAA /* Weather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5770AF924BCE78300386FAA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F5770B0024BCEAD300386FAA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5770B0124BCEAF300386FAA /* DoubleExtension.swift */,
+				F5770B0324BCEB2F00386FAA /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5770AD924BCB7BA00386FAA /* ViewController.swift in Sources */,
+				F5770B0224BCEAF300386FAA /* DoubleExtension.swift in Sources */,
+				F5770AFD24BCE9BA00386FAA /* Main.swift in Sources */,
+				F5770AF724BCE5A000386FAA /* ForecastTableViewCell.swift in Sources */,
+				F5770AD924BCB7BA00386FAA /* ForecastViewController.swift in Sources */,
 				F5770AD524BCB7BA00386FAA /* AppDelegate.swift in Sources */,
+				F5770B0424BCEB2F00386FAA /* StringExtension.swift in Sources */,
 				F5770AD724BCB7BA00386FAA /* SceneDelegate.swift in Sources */,
+				F5770AFB24BCE92700386FAA /* Forecast.swift in Sources */,
+				F5770AFF24BCE9C600386FAA /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
