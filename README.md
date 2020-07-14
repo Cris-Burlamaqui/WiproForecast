@@ -3,8 +3,9 @@ Wipro Digital Mobile Engineer exercise
 
 **To run the application:**
 
-- User must have an iPhone or a simulator with iOS version 13.5.
-- Open the project in XCode, conect you iPhone or choose a simulator, than run the app.
+- User must have an iPhone or a simulator running with iOS version 13.5 or higher.
+- Open the project in XCode, choose a simulator than run the app.
+- To run in a real device you must assign a team development on the Signing and Capabilities tab, than execute the step before choosing your device.
 - The first launch the application will load Dublin weather forecast.
 
 **To search the city weather forecast:**
