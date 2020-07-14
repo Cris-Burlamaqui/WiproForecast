@@ -16,5 +16,13 @@ class ForecastTableViewCell: UITableViewCell {
     @IBOutlet weak var maxTemp: UILabel!
     @IBOutlet weak var forecastDescription: UILabel!
     
+    func getWeekDayText(from weekDay: String) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: weekDay)!
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: date)
+    }
 
 }
