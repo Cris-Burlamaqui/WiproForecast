@@ -35,8 +35,9 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
 
-    @IBAction func searchCityForecast(_ sender: Any) {
+    @IBAction func searchCityForecast(_ sender: Any?) {
         
+        forecastArrayList = []
         request.getForecast(by: cityTextField.text ?? "Dublin")
     }
     
@@ -45,11 +46,14 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: Request delegate - Load data
     
     func didRetrieveForecast(_ data: [Forecast]?) {
-        if let forecastData = data {
-            
-            DispatchQueue.main.async {
-                
-                self.loadWeatherList(forecastData)
+        
+        DispatchQueue.main.async {
+            if let forecastListData = data {
+                self.loadWeatherList(forecastListData)
+            }
+            else {
+                self.cityTextField.text = "Dublin"
+                self.searchCityForecast(nil)
             }
         }
     }
@@ -70,7 +74,9 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
             weekArray = []
         }
         
-        proccessWeatherListData(weekDays.sorted { $0.key < $1.key })
+        let sortedWeekDays = weekDays.sorted { $0.key < $1.key }
+        
+        proccessWeatherListData(sortedWeekDays)
         
     }
     
