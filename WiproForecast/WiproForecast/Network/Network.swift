@@ -49,7 +49,8 @@ class Request {
         do {
             let decoder = JSONDecoder()
             let forecast = try decoder.decode(ForecastList.self, from: data)
-            self.delegate.didRetrieveForecast(forecast.list)
+            let forecastList = ForecastList.init(list: forecast.list)
+            self.delegate.didRetrieveForecast(forecastList.list)
         } catch let decodeError as NSError {
             print("Decode error: \(decodeError.localizedDescription)")
             return
