@@ -31,8 +31,8 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         cityTextField.delegate = self
         request.delegate = self
-        request.getForecast(by: "Dublin,ie")
-        cityTextField.text = "Dublin"
+        cityTextField.text = "Dublin,ie"
+        searchCityForecast(nil)
     }
 
 
@@ -127,7 +127,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         let alert = UIAlertController.init(title: nil, message: "City not found", preferredStyle: .alert)
         let cancel = UIAlertAction.init(title: "Ok", style: .cancel) { (UIAlertAction) in
-            self.cityTextField.text = "Dublin"
+            self.cityTextField.text = "Dublin,ie"
             self.searchCityForecast(nil)
         }
         

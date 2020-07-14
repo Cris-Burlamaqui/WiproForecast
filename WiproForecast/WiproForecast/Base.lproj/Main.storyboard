@@ -118,7 +118,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pcD-oT-nsq" userLabel="Temps Stack View">
-                                                    <rect key="frame" x="206.5" y="25.5" width="65.5" height="49"/>
+                                                    <rect key="frame" x="201.5" y="25.5" width="65.5" height="49"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min. 15º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsM-OU-OnK">
                                                             <rect key="frame" x="2" y="0.0" width="61.5" height="20.5"/>
@@ -135,7 +135,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cloud day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGJ-U5-LHf">
-                                                    <rect key="frame" x="292" y="41" width="69" height="18"/>
+                                                    <rect key="frame" x="282" y="41" width="69" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.53333333329999999" green="0.43137254899999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -148,8 +148,8 @@
                                                 <constraint firstItem="LS1-Gk-Wm7" firstAttribute="centerY" secondItem="35Y-Xd-Hab" secondAttribute="centerY" id="AvW-Lt-C7d"/>
                                                 <constraint firstItem="LS1-Gk-Wm7" firstAttribute="leading" secondItem="35Y-Xd-Hab" secondAttribute="leadingMargin" id="H11-Sr-YQf"/>
                                                 <constraint firstItem="SBz-7Z-HO7" firstAttribute="width" secondItem="35Y-Xd-Hab" secondAttribute="width" multiplier="0.25" id="kLf-gL-J6j"/>
-                                                <constraint firstItem="NGJ-U5-LHf" firstAttribute="leading" secondItem="pcD-oT-nsq" secondAttribute="trailing" constant="20" id="lnU-qk-3p6"/>
-                                                <constraint firstItem="pcD-oT-nsq" firstAttribute="leading" secondItem="LS1-Gk-Wm7" secondAttribute="trailing" constant="20" id="rdV-zg-dYL"/>
+                                                <constraint firstItem="NGJ-U5-LHf" firstAttribute="leading" secondItem="pcD-oT-nsq" secondAttribute="trailing" constant="15" id="lnU-qk-3p6"/>
+                                                <constraint firstItem="pcD-oT-nsq" firstAttribute="leading" secondItem="LS1-Gk-Wm7" secondAttribute="trailing" constant="15" id="rdV-zg-dYL"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="NGJ-U5-LHf" secondAttribute="trailing" id="yUK-Uz-0P0"/>
                                             </constraints>
                                         </tableViewCellContentView>
