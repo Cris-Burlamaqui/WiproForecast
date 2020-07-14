@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night" translatesAutoresizingMaskIntoConstraints="NO" id="OSZ-nH-zaz">
-                                <rect key="frame" x="124" y="234.5" width="166" height="165.5"/>
+                                <rect key="frame" x="145" y="255" width="124" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OSZ-nH-zaz" secondAttribute="height" multiplier="1:1" id="9GS-fX-kfL"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WiproForecast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Eo-Ua-NBG">
-                                <rect key="frame" x="124" y="420" width="166" height="29"/>
+                                <rect key="frame" x="124" y="399" width="166" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.79607843140000001" green="0.89019607840000003" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OSZ-nH-zaz" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.4" id="2rc-hK-cCd"/>
+                            <constraint firstItem="OSZ-nH-zaz" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="2rc-hK-cCd"/>
                             <constraint firstItem="OSZ-nH-zaz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="AhA-lI-OoT"/>
                             <constraint firstItem="4Eo-Ua-NBG" firstAttribute="top" secondItem="OSZ-nH-zaz" secondAttribute="bottom" constant="20" id="FjS-QM-Qmd"/>
                             <constraint firstItem="OSZ-nH-zaz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="V2M-jF-EM0"/>
