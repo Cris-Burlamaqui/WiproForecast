@@ -11,4 +11,4 @@ Wipro Digital Mobile Engineer exercise
 
 - The first launch the application will load Dublin weather forecast.
 - To search another city, type the city's name into text field, click on **Search** button and the weather data will be loaded.
-- In case of there are more than one city whith the same name, the search shoud be city,country_code, e.g. **Dublin,us** so your search will be more precise.
+- In case there are more than one city whith the same name, the search shoud be city,country_code, e.g. **Dublin,us** so your search will be more precise.
