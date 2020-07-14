@@ -1,7 +1,7 @@
 # WiproForecast
 Wipro Digital Mobile Engineer exercise
 
-### Invitation App
+### WiproForecast App
 
 **To run the application:**
 
