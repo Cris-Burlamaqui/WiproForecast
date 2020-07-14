@@ -31,7 +31,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         cityTextField.delegate = self
         request.delegate = self
-        request.getForecast(by: "Dublin")
+        request.getForecast(by: "Dublin,ie")
         cityTextField.text = "Dublin"
     }
 
