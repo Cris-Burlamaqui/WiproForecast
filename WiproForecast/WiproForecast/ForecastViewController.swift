@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForecastViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RequestDelegate {
+class ForecastViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RequestDelegate, UITextFieldDelegate {
     
     
     
@@ -29,6 +29,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cityTextField.delegate = self
         request.delegate = self
         request.getForecast(by: "Dublin")
         cityTextField.text = "Dublin"
@@ -38,7 +39,17 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func searchCityForecast(_ sender: Any?) {
         
         forecastArrayList = []
+        cityTextField.resignFirstResponder()
         request.getForecast(by: cityTextField.text ?? "Dublin")
+    }
+    
+    
+    // MARK: Text field method
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        searchCityForecast(nil)
+        return true
     }
     
     
@@ -52,8 +63,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
                 self.processForecastList(forecastListData)
             }
             else {
-                self.cityTextField.text = "Dublin"
-                self.searchCityForecast(nil)
+                self.showNotFoundMsg()
             }
         }
     }
@@ -111,6 +121,18 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         self.forecastImage.image = self.convertImage(from: forecastArrayList[0].weather[0].main)
         
         self.forecastTableView.reloadData()
+    }
+    
+    func showNotFoundMsg() {
+        
+        let alert = UIAlertController.init(title: nil, message: "City not found", preferredStyle: .alert)
+        let cancel = UIAlertAction.init(title: "Ok", style: .cancel) { (UIAlertAction) in
+            self.cityTextField.text = "Dublin"
+            self.searchCityForecast(nil)
+        }
+        
+        alert.addAction(cancel)
+        self.present(alert, animated: true)
     }
     
     
