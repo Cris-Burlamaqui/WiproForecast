@@ -40,7 +40,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         forecastArrayList = []
         cityTextField.resignFirstResponder()
-        request.getForecast(by: cityTextField.text ?? "Dublin")
+        request.getForecast(by: cityTextField.text ?? "Dublin,ie")
     }
     
     
