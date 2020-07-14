@@ -56,7 +56,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string.rangeOfCharacter(from: .letters) != nil || string == ""{
+        if string.rangeOfCharacter(from: .letters) != nil || string == "" || string == "," {
             return true
         }else {
             let alert = UIAlertController.init(title: "Invalid", message: "Only letters allowed", preferredStyle: .alert)
