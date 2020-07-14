@@ -31,7 +31,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         cityTextField.delegate = self
         request.delegate = self
-        cityTextField.text = "Dublin,ie"
+        cityTextField.text = "Dublin"
         searchCityForecast(nil)
     }
 
@@ -40,7 +40,10 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         forecastArrayList = []
         cityTextField.resignFirstResponder()
-        request.getForecast(by: cityTextField.text ?? "Dublin,ie")
+        
+        let city = "Dublin,ie"
+        cityTextField.text = cityTextField.text ?? city
+        request.getForecast(by: cityTextField.text!.elementsEqual("Dublin") ? city : cityTextField.text!)
     }
     
     
@@ -50,6 +53,18 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         searchCityForecast(nil)
         return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string.rangeOfCharacter(from: .letters) != nil || string == ""{
+            return true
+        }else {
+            let alert = UIAlertController.init(title: "Invalid", message: "Only letters allowed", preferredStyle: .alert)
+            let cancel = UIAlertAction.init(title: "Ok", style: .cancel)
+            alert.addAction(cancel)
+            present(alert, animated: true)
+            return false
+        }
     }
     
     
@@ -127,7 +142,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         let alert = UIAlertController.init(title: nil, message: "City not found", preferredStyle: .alert)
         let cancel = UIAlertAction.init(title: "Ok", style: .cancel) { (UIAlertAction) in
-            self.cityTextField.text = "Dublin,ie"
+            self.cityTextField.text = "Dublin"
             self.searchCityForecast(nil)
         }
         
