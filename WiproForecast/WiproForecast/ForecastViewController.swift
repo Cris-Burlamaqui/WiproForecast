@@ -59,7 +59,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         if string.rangeOfCharacter(from: .letters) != nil || string == "" || string == "," {
             return true
         }else {
-            let alert = UIAlertController.init(title: "Invalid", message: "Only letters allowed", preferredStyle: .alert)
+            let alert = UIAlertController.init(title: "Invalid", message: "Character not allowed", preferredStyle: .alert)
             let cancel = UIAlertAction.init(title: "Ok", style: .cancel)
             alert.addAction(cancel)
             present(alert, animated: true)
