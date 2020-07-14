@@ -9,5 +9,5 @@ Wipro Digital Mobile Engineer exercise
 
 **To search the city weather forecast:**
 
-- To search another city, type the city's name into text field and click on **Search** button and the weather data will be loaded.
-- In case of there are more than one city whith the same name, the search shoud be city,country_code e.g. **Dublin,us** so your search will be more precise.
+- To search another city, type the city's name into text field, click on **Search** button and the weather data will be loaded.
+- In case of there are more than one city whith the same name, the search shoud be city,country_code, e.g. **Dublin,us** so your search will be more precise.
