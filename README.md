@@ -1,8 +1,6 @@
 # WiproForecast
 Wipro Digital Mobile Engineer exercise
 
-### WiproForecast App
-
 **To run the application:**
 
 - User must have an iPhone or a simulator with iOS version 13.5.
