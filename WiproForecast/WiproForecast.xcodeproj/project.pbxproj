@@ -18,8 +18,6 @@
 		F5770AFB24BCE92700386FAA /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AFA24BCE92700386FAA /* Forecast.swift */; };
 		F5770AFD24BCE9BA00386FAA /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AFC24BCE9BA00386FAA /* Main.swift */; };
 		F5770AFF24BCE9C600386FAA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770AFE24BCE9C600386FAA /* Weather.swift */; };
-		F5770B0224BCEAF300386FAA /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770B0124BCEAF300386FAA /* DoubleExtension.swift */; };
-		F5770B0424BCEB2F00386FAA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770B0324BCEB2F00386FAA /* StringExtension.swift */; };
 		F5770B0624BCECE000386FAA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5770B0524BCECE000386FAA /* Network.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +47,6 @@
 		F5770AFA24BCE92700386FAA /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		F5770AFC24BCE9BA00386FAA /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		F5770AFE24BCE9C600386FAA /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		F5770B0124BCEAF300386FAA /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
-		F5770B0324BCEB2F00386FAA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		F5770B0524BCECE000386FAA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +94,6 @@
 				F5770AD824BCB7BA00386FAA /* ForecastViewController.swift */,
 				F5770AF824BCE77100386FAA /* Model */,
 				F5770AF924BCE78300386FAA /* Network */,
-				F5770B0024BCEAD300386FAA /* Extensions */,
 				F5770ADA24BCB7BA00386FAA /* Main.storyboard */,
 				F5770ADD24BCB7BC00386FAA /* Assets.xcassets */,
 				F5770ADF24BCB7BC00386FAA /* LaunchScreen.storyboard */,
@@ -133,15 +128,6 @@
 				F5770B0524BCECE000386FAA /* Network.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		F5770B0024BCEAD300386FAA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F5770B0124BCEAF300386FAA /* DoubleExtension.swift */,
-				F5770B0324BCEB2F00386FAA /* StringExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,12 +232,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5770B0624BCECE000386FAA /* Network.swift in Sources */,
-				F5770B0224BCEAF300386FAA /* DoubleExtension.swift in Sources */,
 				F5770AFD24BCE9BA00386FAA /* Main.swift in Sources */,
 				F5770AF724BCE5A000386FAA /* ForecastTableViewCell.swift in Sources */,
 				F5770AD924BCB7BA00386FAA /* ForecastViewController.swift in Sources */,
 				F5770AD524BCB7BA00386FAA /* AppDelegate.swift in Sources */,
-				F5770B0424BCEB2F00386FAA /* StringExtension.swift in Sources */,
 				F5770AD724BCB7BA00386FAA /* SceneDelegate.swift in Sources */,
 				F5770AFB24BCE92700386FAA /* Forecast.swift in Sources */,
 				F5770AFF24BCE9C600386FAA /* Weather.swift in Sources */,
