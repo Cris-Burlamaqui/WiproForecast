@@ -8,4 +8,4 @@ Wipro Digital Mobile Engineer exercise
 - User must have an iPhone or a simulator with iOS version 13.5.
 - Open the project in XCode, conect you iPhone or choose a simulator, than run the app.
 - In the first lauch the application will load Dublin weather.
-- To search another city, type the city name into text field and click on ![](images/search.png) and the new city weather data will load.
+- To search another city, type the city name into text field and click on *Search* button and the new city's weather data will load.
