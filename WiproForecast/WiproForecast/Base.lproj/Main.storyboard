@@ -29,7 +29,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="279" height="34"/>
                                                         <color key="textColor" red="0.53333333329999999" green="0.43137254899999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search" textContentType="address-level2"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3J-tj-t78">
                                                         <rect key="frame" x="315" y="0.0" width="58" height="34"/>

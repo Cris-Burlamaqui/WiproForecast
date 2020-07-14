@@ -24,6 +24,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     
     var forecastArrayList: [Forecast] = []
     
+    var tapView = UITapGestureRecognizer()
     
     
     override func viewDidLoad() {
@@ -33,6 +34,9 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         request.delegate = self
         cityTextField.text = "Dublin"
         searchCityForecast(nil)
+        
+        tapView.addTarget(self, action: #selector(resignTextField))
+        view.addGestureRecognizer(tapView)
     }
 
 
@@ -56,15 +60,24 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string.rangeOfCharacter(from: .letters) != nil || string == "" || string == "," {
+        
+        if string.rangeOfCharacter(from: .letters) != nil || string == "" || string == " " || string == "," {
+            if textField.text!.contains(",") && string == "," {
+                return false
+            }
             return true
-        }else {
+        }
+        else {
             let alert = UIAlertController.init(title: "Invalid", message: "Character not allowed", preferredStyle: .alert)
             let cancel = UIAlertAction.init(title: "Ok", style: .cancel)
             alert.addAction(cancel)
             present(alert, animated: true)
             return false
         }
+    }
+    
+    @objc func resignTextField() {
+        cityTextField.resignFirstResponder()
     }
     
     
