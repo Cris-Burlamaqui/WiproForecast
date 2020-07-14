@@ -43,13 +43,13 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     
-    // MARK: Request delegate - Load data
+    // MARK: Request delegate - Loading and processing data
     
     func didRetrieveForecast(_ data: [Forecast]?) {
         
         DispatchQueue.main.async {
             if let forecastListData = data {
-                self.loadWeatherList(forecastListData)
+                self.processForecastList(forecastListData)
             }
             else {
                 self.cityTextField.text = "Dublin"
@@ -58,7 +58,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func loadWeatherList(_ data:  [Forecast]) {
+    func processForecastList(_ data:  [Forecast]) {
         
         var weekDays: [String: [Forecast]] = [:]
         var weekArray = Array<Forecast>()
@@ -76,11 +76,11 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         let sortedWeekDays = weekDays.sorted { $0.key < $1.key }
         
-        proccessWeatherListData(sortedWeekDays)
+        loadWeatherList(from: sortedWeekDays)
         
     }
     
-    func proccessWeatherListData(_ forecastDictionary: [Dictionary<String, [Forecast]>.Element]) {
+    func loadWeatherList(from forecastDictionary: [Dictionary<String, [Forecast]>.Element]) {
         
         for forecastList in forecastDictionary {
             
@@ -107,7 +107,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         self.forecastDescription.text = self.forecastArrayList[0].weather[0].main
-        self.temperature.text = self.convertTemperature(self.forecastArrayList[0].main.temp)
+        self.temperature.text = "\(Int(self.forecastArrayList[0].main.temp))ºC"
         self.forecastImage.image = self.convertImage(from: forecastArrayList[0].weather[0].main)
         
         self.forecastTableView.reloadData()
@@ -132,24 +132,15 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         let forecast = forecastArrayList[indexPath.row]
         cell.forecastIcon.image = convertImage(from: forecast.weather[0].main)
         cell.weekDay.text = cell.getWeekDayText(from: forecast.dt_txt)
-        cell.minTemp.text = convertTemperature(forecast.main.temp_min)
-        cell.maxTemp.text = convertTemperature(forecast.main.temp_max)
+        cell.minTemp.text = "min. \(Int(forecast.main.temp_min))ºC"
+        cell.maxTemp.text = "max. \(Int(forecast.main.temp_max))ºC"
         cell.forecastDescription.text = forecast.weather[0].description
         
         return cell
     }
     
     
-    // MARK: Convertions
-    
-    func convertTemperature(_ temp: Double, from inputTempType: UnitTemperature = .kelvin, to outputTempType: UnitTemperature = .celsius) -> String {
-        let mf = MeasurementFormatter()
-        mf.numberFormatter.maximumFractionDigits = 0
-        mf.unitOptions = .providedUnit
-        let input = Measurement(value: temp, unit: inputTempType)
-        let output = input.converted(to: outputTempType)
-        return mf.string(from: output)
-    }
+    // MARK: Data convertions
     
     func convertImage(from description: String) -> UIImage {
         
