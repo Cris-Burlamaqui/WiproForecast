@@ -70,7 +70,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
                 weekArray.append(data[i])
                 continue
             }
-            weekDays.updateValue(weekArray, forKey: data[i].dt_txt)
+            weekDays.updateValue(weekArray, forKey: data[i - 1].dt_txt)
             weekArray = []
         }
         
@@ -131,7 +131,12 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
         let forecast = forecastArrayList[indexPath.row]
         cell.forecastIcon.image = convertImage(from: forecast.weather[0].main)
-        cell.weekDay.text = cell.getWeekDayText(from: forecast.dt_txt)
+        if indexPath.row == 0 {
+            cell.weekDay.text = "Today"
+        }
+        else {
+            cell.weekDay.text = cell.getWeekDayText(from: forecast.dt_txt)
+        }
         cell.minTemp.text = "min. \(Int(forecast.main.temp_min))ºC"
         cell.maxTemp.text = "max. \(Int(forecast.main.temp_max))ºC"
         cell.forecastDescription.text = forecast.weather[0].description
